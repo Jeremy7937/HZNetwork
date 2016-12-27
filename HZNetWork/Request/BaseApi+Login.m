@@ -14,7 +14,6 @@
 + (void)LoginWithMobile:(NSString *)mobile verifyCode:(NSString *)verifyCode callback:(Callback)loginCallback {
     NSDictionary *params = @{@"mobile":mobile,@"validCode":verifyCode,@"os":@"iOS"};
     [BaseApi sendPostRequestWithMethod:kRegisterLogin parameters:params callback:loginCallback];
-
 }
 
 @end

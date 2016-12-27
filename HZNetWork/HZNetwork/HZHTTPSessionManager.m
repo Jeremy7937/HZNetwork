@@ -34,6 +34,8 @@ static HZHTTPSessionManager *mgr = nil;
         mgr.requestSerializer = requestSerializer;
         mgr.responseSerializer = respondSerializer;
         
+        //可以在这里支持https请求
+        
     });
     
     return mgr;

@@ -36,7 +36,7 @@
         NSLog(@"error : %@",request.message);
         NSLog(@"result: %@",request.dataModel);
     } finish:^(BOOL isAllSuccess) {
-         NSLog(@"_____两个都请求结束。。");
+        NSLog(@"_____两个都请求结束。。");
     }];
 }
 

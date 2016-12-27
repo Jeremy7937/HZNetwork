@@ -18,9 +18,8 @@
     
     dispatch_group_t group = dispatch_group_create();
     //请求免费限免接口
-    dispatch_group_enter(group);
+    dispatch_group_enter(group);  //如果是异步请求 需要手动管理group关联的block  enter() 和 leave() 要成对出现
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        
         [BaseApi sendGetRequestWithMethod:kMethod parameters:params callback:^(HZRequest *request) {
             freeCallback(request);
             if (!request.requestResult) {
